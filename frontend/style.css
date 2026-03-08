@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background: #111827;
+    color: #f9fafb;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.nav button {
+    margin-left: 8px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    background: #2563eb;
+    color: #f9fafb;
+}
+
+.nav button:hover {
+    background: #1d4ed8;
+}
+
+.container {
+    max-width: 900px;
+    margin: 24px auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 24px;
+}
+
+/* Panel logowania/rejestracji */
+.auth-panel {
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.auth-panel h2, .auth-panel h3 {
+    margin-bottom: 12px;
+}
+
+.auth-panel form {
+    margin-bottom: 16px;
+}
+
+.auth-panel label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.auth-panel input {
+    width: 100%;
+    padding: 6px 8px;
+    margin-top: 4px;
+    border-radius: 4px;
+    border: 1px solid #d1d5db;
+}
+
+.auth-panel button {
+    margin-top: 8px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    background: #10b981;
+    color: #f9fafb;
+    cursor: pointer;
+}
+
+.auth-panel button:hover {
+    background: #059669;
+}
+
+/* Feed */
+.feed h2 {
+    margin-bottom: 12px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 16px;
+}
+
+#new-post-form textarea {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #d1d5db;
+    padding: 8px;
+    resize: vertical;
+}
+
+#new-post-form button {
+    margin-top: 8px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    background: #2563eb;
+    color: #f9fafb;
+    cursor: pointer;
+}
+
+#new-post-form button:hover {
+    background: #1d4ed8;
+}
+
+/* Posty */
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.post-author {
+    font-weight: 600;
+    color: #111827;
+}
+
+.post-content {
+    margin-bottom: 8px;
+}
+
+.post-actions button {
+    margin-right: 8px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: none;
+    background: #e5e7eb;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.post-actions button:hover {
+    background: #d1d5db;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+.rooms-panel {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.rooms-panel ul {
+    list-style: none;
+}
+
+.rooms-panel li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.rooms-panel li:hover {
+    background: #f0f0f0;
+}
+
+.chat-messages {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.chat-message .author {
+    font-weight: bold;
+}
+.chat-message .content {
+    margin-left: 10px;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Mój portal społecznościowy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="logo">SocialMini</div>
+        <nav class="nav">
+            <button id="show-login">Logowanie</button>
+            <button id="show-register">Rejestracja</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Lista pokoi -->
+<section class="rooms-panel card">
+    <h2>Pokoje</h2>
+    <ul id="rooms-list"></ul>
+</section>
+
+<!-- Czat -->
+<section class="chat-panel card">
+    <h2 id="current-room-name">Wybierz pokój</h2>
+
+    <div id="chat-messages" class="chat-messages"></div>
+
+    <form id="chat-form" style="display:none;">
+        <input type="text" id="chat-input" placeholder="Napisz wiadomość..." required>
+        <button type="submit">Wyślij</button>
+    </form>
+</section>
+
+        <!-- Panel auth -->
+        <section class="auth-panel" id="auth-panel">
+            <h2>Logowanie</h2>
+            <form id="login-form">
+                <label>
+                    Email:
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Hasło:
+                    <input type="password" name="password" required>
+                </label>
+                <button type="submit">Zaloguj</button>
+            </form>
+
+            <h3>Nie masz konta?</h3>
+            <form id="register-form">
+                <label>
+                    Email:
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Hasło:
+                    <input type="password" name="password" required>
+                </label>
+                <label>
+                    Nazwa użytkownika:
+                    <input type="text" name="username" required>
+                </label>
+                <button type="submit">Zarejestruj</button>
+            </form>
+        </section>
+
+        <!-- Główna tablica postów -->
+        <section class="feed" id="feed">
+            <h2>Tablica postów</h2>
+
+            <!-- Formularz dodawania posta -->
+            <form id="new-post-form" class="card">
+                <textarea name="content" rows="3" placeholder="Co słychać?" required></textarea>
+                <button type="submit">Opublikuj</button>
+            </form>
+
+            <!-- Lista postów -->
+            <div id="posts-list">
+                <!-- Na razie przykładowe posty na sztywno -->
+                <article class="post card">
+                    <div class="post-header">
+                        <span class="post-author">demo_user</span>
+                        <span class="post-date">2026-03-08</span>
+                    </div>
+                    <p class="post-content">
+                        To jest przykładowy post na moim nowym portalu społecznościowym!
+                    </p>
+                    <div class="post-actions">
+                        <button>👍 Lubię to</button>
+                        <button>Komentarze (0)</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
